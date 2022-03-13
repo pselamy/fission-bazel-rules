@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "node-java-connector": "^1.0.1"
+  },
   "devDependencies": {
     "@bazel/typescript": "^5.2.0",
     "typescript": "3.6.3"
