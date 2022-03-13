@@ -4,6 +4,7 @@
     "typescript": "3.6.3"
   },
   "scripts": {
+    "install": "node install.js",
     "test": "bazel test ..."
   }
 }
