@@ -16,9 +16,9 @@ java_proto_library(
 
 java_binary(
     name = "hello_world",
-    srcs = ["HelloWorld.java"],
-    main_class = "HelloWorld",
-    deps = [
+    srcs = [
+        "HelloWorld.java",
         ":http_proto",
-    ]
+    ],
+    main_class = "HelloWorld",
 )
