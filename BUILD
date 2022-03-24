@@ -22,5 +22,6 @@ java_binary(
     main_class = "HelloWorld",
     deps = [
         ":http_java_proto",
+        "@maven//:com_google_guava_guava",
     ],
 )
