@@ -14,16 +14,7 @@ load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
 
 git_repository(
-    name = "rules_nodejs",
+    name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
     tag = "5.2.0",  # check for the latest tag when you install
-)
-
-load("@rules_nodejs//:index.bzl", "yarn_install")
-
-yarn_install(
-    name = "npm",
-    exports_directories_only = False,
-    package_json = "//:package.json",
-    yarn_lock = "//:yarn.lock",
 )
