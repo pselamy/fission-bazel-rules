@@ -20,7 +20,7 @@ java_binary(
         "HelloWorld.java",
     ],
     main_class = "HelloWorld",
-    runtime_deps = [
-        ":http_proto",
+    deps = [
+        ":http_java_proto",
     ],
 )
