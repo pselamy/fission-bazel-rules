@@ -14,7 +14,7 @@ load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
 
 git_repository(
-    name = "build_bazel_rules_nodejs",
+    name = "rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
     tag = "5.2.0",  # check for the latest tag when you install
 )
