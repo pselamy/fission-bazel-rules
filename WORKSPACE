@@ -19,7 +19,7 @@ git_repository(
     tag = "5.2.0",  # check for the latest tag when you install
 )
 
-load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
+load("@rules_nodejs//:index.bzl", "yarn_install")
 
 yarn_install(
     name = "npm",
