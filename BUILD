@@ -18,7 +18,9 @@ java_binary(
     name = "hello_world",
     srcs = [
         "HelloWorld.java",
-        ":http_proto",
     ],
     main_class = "HelloWorld",
+    runtime_deps = [
+        ":http_proto",
+    ],
 )
