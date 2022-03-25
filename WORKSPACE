@@ -52,6 +52,19 @@ load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
 
 git_repository(
+    name = "rules_proto",
+    commit = "244e0b64fdc6a89df8b1750eada7b909b3cbc459",
+    remote = "https://github.com/bazelbuild/rules_proto",
+    shallow_since = "1580681072 -0800",
+)
+
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+
+rules_proto_dependencies()
+
+rules_proto_toolchains()
+
+git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
     tag = "5.2.0",  # check for the latest tag when you install
