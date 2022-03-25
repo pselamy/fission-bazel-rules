@@ -67,7 +67,7 @@ rules_proto_toolchains()
 git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
-    commit = "51ea2c61752819f47f0a2b45f4b8aa015ba7268e",
+    commit = "5a1cbfaf5ebedc7b9c94f80d9bdb0509508c6377",
     shallow_since = "1646149708 -0800"
 )
 
