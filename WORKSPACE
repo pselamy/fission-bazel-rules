@@ -1,4 +1,7 @@
-workspace(name = "fission_node_java_rules")
+workspace(
+    name = "fission_node_java_rules",
+    managed_directories = {"@npm": ["node_modules"]},
+)
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
