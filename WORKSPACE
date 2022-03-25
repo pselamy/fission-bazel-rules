@@ -78,6 +78,16 @@ load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_d
 
 build_bazel_rules_nodejs_dependencies()
 
+git_repository(
+    name = "rules_proto_grpc",
+    remote = "https://github.com/rules-proto-grpc/rules_proto_grpc",
+    tag = "4.1.1",
+)
+
+load("@rules_proto_grpc//js:repositories.bzl", rules_proto_grpc_js_repos = "js_repos")
+
+rules_proto_grpc_js_repos()
+
 load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
 
 yarn_install(
