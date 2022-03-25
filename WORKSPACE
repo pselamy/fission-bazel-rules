@@ -6,7 +6,7 @@ git_repository(
     name = "contrib_rules_jvm",
     remote = "https://github.com/bazel-contrib/rules_jvm",
     commit = "f7c08ec6d73ef691b03f843e0c2c3dbe766df584", 
-    shallow_since = "1642674503 +0000"
+    shallow_since = "1642674503 +0000",
 )
 
 load("@contrib_rules_jvm//:repositories.bzl", "contrib_rules_jvm_deps")
