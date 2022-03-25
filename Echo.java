@@ -9,6 +9,6 @@ class Echo {
         String requestStr = args[0];
         HttpRequest request = HttpRequest.parseFrom(base64().decode(requestStr));
         HttpResponse response = HttpResponse.newBuilder().setBody(request.getBody()).build();
-        System.out.writeln(base64().encode(response.toByteArray()));
+        System.out.println(base64().encode(response.toByteArray()));
     }
 }
