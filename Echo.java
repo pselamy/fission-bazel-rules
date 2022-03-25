@@ -3,6 +3,7 @@ import static com.google.common.io.BaseEncoding.base64;
 import com.github.pselamy.http.HttpRequest;
 import com.github.pselamy.http.HttpResponse;
 import com.google.common.io.BaseEncoding;
+import com.google.protobuf.InvalidProtocolBufferException;
 
 class Echo {
     public static void main(String[] args) {
