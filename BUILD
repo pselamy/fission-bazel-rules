@@ -15,11 +15,11 @@ java_proto_library(
 )
 
 java_binary(
-    name = "hello_world",
+    name = "echo",
     srcs = [
-        "HelloWorld.java",
+        "Echo.java",
     ],
-    main_class = "HelloWorld",
+    main_class = "Echo",
     deps = [
         ":http_java_proto",
         "@maven//:com_google_guava_guava",
