@@ -56,3 +56,7 @@ git_repository(
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
     tag = "5.2.0",  # check for the latest tag when you install
 )
+
+load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
+
+build_bazel_rules_nodejs_dependencies()
