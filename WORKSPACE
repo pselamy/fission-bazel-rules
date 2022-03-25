@@ -86,6 +86,8 @@ node_repositories(
     node_version = "16.13.2", # specific Node.js version
 )
 
+# The npm_install rule runs npm anytime the package.json or package-lock.json file changes.
+# It also extracts any Bazel rules distributed in an npm package.
 load("@build_bazel_rules_nodejs//:index.bzl", "npm_install")
 npm_install(
     # Name this npm so that Bazel Label references look like @npm//package
