@@ -78,24 +78,10 @@ load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_d
 
 build_bazel_rules_nodejs_dependencies()
 
-# Load the node_repositories function
-load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories")
+load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
 
-# This rule installs nodejs, npm, and yarn, but does NOT install
-# your npm dependencies into your node_modules folder.
-# You must still run the package manager to do this.
-node_repositories(
-    package_json = ["//:package.json"],
-    node_version = "16.13.2", # specific Node.js version
-)
-
-# The npm_install rule runs npm anytime the package.json or package-lock.json file changes.
-# It also extracts any Bazel rules distributed in an npm package.
-load("@build_bazel_rules_nodejs//:index.bzl", "npm_install")
-npm_install(
-    # Name this npm so that Bazel Label references look like @npm//package
+yarn_install(
     name = "npm",
-    # Paths to the package*.json files
-    package_json = "//:package.json",
-    package_lock_json = "//:package-lock.json",
+    package_json = ":package.json",
+    yarn_lock = "@rules_proto_grpc//js:requirements/yarn.lock",
 )
