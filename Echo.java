@@ -6,7 +6,7 @@ import com.google.common.io.BaseEncoding;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 class Echo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidProtocolBufferException {
         String requestStr = args[0];
         HttpRequest request = HttpRequest.parseFrom(base64().decode(requestStr));
         HttpResponse response = HttpResponse.newBuilder().setBody(request.getBody()).build();
