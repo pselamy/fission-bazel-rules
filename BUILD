@@ -22,6 +22,7 @@ java_binary(
     main_class = "Echo",
     deps = [
         ":http_java_proto",
+        "@com_google_protobuf//:protobuf_java",
         "@maven//:com_google_guava_guava",
     ],
 )
