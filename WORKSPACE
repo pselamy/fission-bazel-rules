@@ -67,7 +67,8 @@ rules_proto_toolchains()
 git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
-    tag = "5.2.0",  # check for the latest tag when you install
+    commit = "51ea2c61752819f47f0a2b45f4b8aa015ba7268e",
+    shallow_since = "1646149708 -0800"
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
