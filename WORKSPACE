@@ -58,7 +58,7 @@ git_repository(
     name = "rules_proto",
     commit = "244e0b64fdc6a89df8b1750eada7b909b3cbc459",
     remote = "https://github.com/bazelbuild/rules_proto",
-    shallow_since = "1580681072 -0800",
+    shallow_since = "1643128848 +0100",
 )
 
 load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
@@ -71,7 +71,7 @@ git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
     commit = "5a1cbfaf5ebedc7b9c94f80d9bdb0509508c6377",
-    shallow_since = "1646149708 -0800"
+    shallow_since = "1646149708 -0800",
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
