@@ -1,3 +1,4 @@
+load("@com_google_protobuf//:protobuf.bzl", "py_binary", "py_proto_library")
 load("@rules_java//java:defs.bzl", "java_binary", "java_proto_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 
@@ -6,9 +7,15 @@ proto_library(
     srcs = ["http.proto"],
 )
 
+py_proto_library(
+    name = "http_python_proto",
+    srcs = ["http.proto"],
+)
+
 java_proto_library(
     name = "http_java_proto",
-    deps = [":http_proto"],
+    visibility = ["//visibility:public"],
+    deps = [":http_proto",],
 )
 
 java_binary(
