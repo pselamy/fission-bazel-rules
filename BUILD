@@ -9,17 +9,13 @@ proto_library(
 
 py_proto_library(
     name = "http_python_proto",
-    deps = [
-        ":http_proto",
-    ],
+    srcs = ["http.proto"],
 )
 
 java_proto_library(
     name = "http_java_proto",
     visibility = ["//visibility:public"],
-    deps = [
-        ":http_proto",
-    ],
+    deps = [":http_proto",],
 )
 
 java_binary(
