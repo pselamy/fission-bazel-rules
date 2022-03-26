@@ -1,5 +1,6 @@
 load("@rules_java//java:defs.bzl", "java_binary", "java_proto_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_proto_grpc//js:defs.bzl", "js_proto_library")
 
 proto_library(
     name = "http_proto",
@@ -12,6 +13,11 @@ java_proto_library(
     deps = [
         ":http_proto",
     ],
+)
+
+js_proto_library(
+    name = "http_js_proto",
+    protos = [":http_proto"],
 )
 
 java_binary(
