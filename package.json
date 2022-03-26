@@ -8,11 +8,6 @@
     "ts-protoc-gen": "0.15.0",
     "node-java-connector": "^1.0.1"
   },
-  "devDependencies": {
-    "@bazel/typescript": "^5.2.0",
-    "protobufjs": "=6.8.8",
-    "typescript": "3.6.3"
-  },
   "scripts": {
     "install": "node install.js",
     "test": "bazel test ..."
