@@ -9,7 +9,6 @@ proto_library(
 
 java_proto_library(
     name = "http_java_proto",
-    visibility = ["//visibility:public"],
     srcs = ["http.proto"],
 )
 
